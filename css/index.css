@@ -1,0 +1,86 @@
+body{
+	margin:0;
+	padding:0;
+}
+.wrapper{
+	width:100%;
+	height: auto;
+}
+.adblock-wrapper{
+	position: relative;
+	height:300px;
+	background-color: silver;
+}
+.adblock-content{
+	position: absolute;
+	height: 100px;
+	background-color: white;
+	bottom:50px;
+	left:100px;
+	border-bottom: 5px solid blue;
+}
+.adblock-content h5{
+	color:blue;
+}
+.list-content-wrapper{
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+
+}
+.list-content-content1, .list-content-content2, .list-content-content3{
+	display: flex;
+	border-bottom:1px dotted;
+	padding-bottom:10px;
+}
+
+.list-box{
+	height:100px;
+	width:100px;
+	background-color:silver;
+}
+
+.model_wrapper{
+	display: none;
+	position: fixed;
+}
+.model-heading-wrapper{
+	height: 100px;
+	background-color: blue;
+	color:white;
+}
+
+
+
+@media only screen and (min-width:600px) {
+	.wrapper{
+		display:flex;
+		flex-direction:row;
+	}
+	.adblock-wrapper{
+		
+		flex-basis: 50%;
+		
+	}
+	.outer-wrapper{
+		padding:30px 30px 0px 30px;
+		width:100%;
+		background-color: #f7f7f7;
+	}
+	.adblock-content{
+		bottom:-30px;
+		left:0px;
+	}
+	}
+
+	@media only screen and(min-width:1025px){
+
+	.list-content-wrapper{
+	display: flex;	
+	flex-direction: row;
+	}
+	.list-content-content1, .list-content-content2, .list-content-content3{
+	display: flex;
+	flex-direction: column;
+	
+	}
