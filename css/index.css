@@ -1,86 +1,208 @@
 body{
 	margin:0;
 	padding:0;
+	overflow-x: hidden;
 }
 .wrapper{
-	width:100%;
 	height: auto;
+	border:1px solid silver;
+	padding-bottom:70px;
 }
 .adblock-wrapper{
+	width:100%;
 	position: relative;
-	height:300px;
-	background-color: silver;
+	height:200px;
+	background-color: #d8d8d8;
 }
-.adblock-content{
+.adblock-content{ 
+	padding-left:20px;
 	position: absolute;
-	height: 100px;
 	background-color: white;
-	bottom:50px;
+	bottom:40px;
+	right:0px;
 	left:100px;
-	border-bottom: 5px solid blue;
+	border-bottom: 5px solid #0165a7;
+	height:90px;
 }
-.adblock-content h5{
-	color:blue;
+.ad-text{
+	color:#0165a7;
+	font-size:18px;
 }
 .list-content-wrapper{
-	padding-left:10px;
-	padding-right:10px;
-	padding-top:10px;
+	padding:20px 20px 0px 20px;
 
 }
 .list-content-content1, .list-content-content2, .list-content-content3{
 	display: flex;
-	border-bottom:1px dotted;
+	border-bottom:1px dotted #d8d8d8;
 	padding-bottom:10px;
+	padding-top:10px;
 }
-
-.list-box{
-	height:100px;
+.list-text-content{
+	width:70%;
+	font-weight: bold;
+	color: #4b4b4b;
+}
+.list-box-content{
+	margin: 10px 0px 20px 30px;
+	height:75px;
 	width:100px;
-	background-color:silver;
-}
-
-.model_wrapper{
-	display: none;
-	position: fixed;
-}
-.model-heading-wrapper{
-	height: 100px;
-	background-color: blue;
-	color:white;
+	background-color:#d8d8d8;
 }
 
 
 
-@media only screen and (min-width:600px) {
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #0165a7;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+.text-continue{
+  text-align: right;
+  font-size:18px;
+  color:#5F5F5F;
+}
+.modal-text-content{
+  font-size:18px;
+  color:#5F5F5F;
+  line-height: 2;
+}
+
+
+
+
+
+@media(min-width:600px) {
 	.wrapper{
+		padding: 50px;
 		display:flex;
 		flex-direction:row;
+		border:none;
+		background: linear-gradient(to top, white 53%, #EEECEF 47%);
 	}
 	.adblock-wrapper{
-		
-		flex-basis: 50%;
-		
+		height:auto;
+		flex-basis:85%;
 	}
-	.outer-wrapper{
-		padding:30px 30px 0px 30px;
-		width:100%;
-		background-color: #f7f7f7;
+	.list-content-wrapper{
+		background-color:white;
+	}
+	.list-text-content{
+		font-size:18px;
 	}
 	.adblock-content{
-		bottom:-30px;
+		bottom:-50px;
 		left:0px;
+		right:30px;
+		border-bottom: 10px solid #0165a7;
 	}
 	}
 
-	@media only screen and(min-width:1025px){
+@media (min-width:1025px){
 
-	.list-content-wrapper{
-	display: flex;	
-	flex-direction: row;
-	}
-	.list-content-content1, .list-content-content2, .list-content-content3{
-	display: flex;
-	flex-direction: column;
-	
-	}
+.wrapper{
+    padding-left: 150px;
+    padding-top:100px;
+    display:flex;
+    flex-direction:row;
+    border:none;
+    background: linear-gradient(to top, white 70%, #EEECEF 30%);
+  }
+
+.adblock-wrapper{
+	width:100%;
+	position: relative;
+	background-color: #d8d8d8;
+}
+
+.adblock-content{
+  width:68%; 
+  padding-right: 30px;
+  top:50px;
+  left:200px;
+  border-bottom: 10px solid #0165a7;
+ 
+}
+.list-content-wrapper{
+  display: flex;
+  padding-top:270px;
+  background-color:transparent;
+}
+.list-content-content1, .list-content-content2, .list-content-content3{
+  flex-direction: column;
+  border-right:1px dotted #d8d8d8;
+  border-bottom:none;
+  padding: 0px 50px 0px 0px;
+
+
+}
+.list-content-content3{
+	border-right:none;
+}
+.list-text-content{
+  width:100%;
+  flex:1;
+  padding:0px 30px;
+}
+.list-box-content{
+  flex:1;
+}
+
+}
